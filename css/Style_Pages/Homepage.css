@@ -1,0 +1,62 @@
+h2 {
+    font-size: 70px;
+}
+
+/* Featured Games Section */
+#featuredGames {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 30px 40px 30px; /* Padding order: top right bottom left */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+    border-radius: 8px;
+    color: rgb(255, 221, 108);
+}
+
+/* Game Card Styles */
+#gameCards {
+    text-align: center;
+}
+
+#gameCards h3 {
+    color: #53e8ff; /* Set text color to the specified blue */
+    font-size: 60px;
+    font-weight: 900; /* Increase the text weight to make it thicker */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 15px; /* Increase letter spacing to make the text appear wider */
+    padding: 10px;
+}
+
+
+
+
+#gameCards p {
+    color: #e4e4e4;
+    font-size: 16px;
+    line-height: 1.5pc;
+    padding: 0px 150px;
+}
+
+/* Game card anchor elements */
+#gameCards a {
+    display: inline-block;
+    padding: 8px 16px; /* 8px top and bottom, 16px left and right */
+    background-color: rgba(34, 78, 188, 0.8); /* This as well as morestuff to make it look mor like a button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+#gameCards a:hover {
+    background-color: rgb(58, 147, 176); /* Lighter red on button hover */
+}
+
+/* Gamecards Sections Styles */
+#snake_section img {
+    max-width: 200px; /* Set a specific maximum width for all images */
+    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
+    border-radius: 40px; /* Makes the edges of the border rounder */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 10px; /* Adjust the bottom margin as needed */
+}

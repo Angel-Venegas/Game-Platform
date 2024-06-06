@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This meta tag specifies the character encoding for the document. UTF-8 is widely used for handling various character sets. -->
+    <meta charset="UTF-8">
+    <!-- 
+        <meta> Tag:
+
+        The <meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page but will be machine-readable.
+        name="viewport":
+
+        The name attribute of the <meta> tag specifies the type of metadata. In this case, it is set to "viewport", which relates to the visible area of a web page on a device.
+        content="width=device-width, initial-scale=1.0":
+
+        The content attribute contains directives for the browser on how to control the page's dimensions and scaling.
+        width=device-width:
+        This sets the width of the viewport to be equal to the width of the device. This ensures that the content matches the width of the screen, making the layout responsive to different screen sizes.
+        initial-scale=1.0:
+        This sets the initial zoom level when the page is first loaded by the browser. An initial scale of 1.0 means the page will not be zoomed in or out when it is first loaded.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title tag is what text will be shown on user's browser tab. -->
+    <title>Game Platform</title>
+    <link rel="stylesheet" href="../css/Style_Pages/GeneralStyle.css">
+    <link rel="stylesheet" href="../css/Style_Pages/Homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop playsinline preload id="video-background" style="object-fit: cover; opacity: 0.7;">
+        <source src="../videos/Red Ball Loop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- This Contains Content About The Navigation Bar -->
+    <navigation>
+        <!-- Homepage's Navigation Bar's List Of Items -->
+        <ul class="navigationBarList vollkorn-font">
+            <li class="item left"> <a href="Games.html">Games</a> </li> <!-- Multiple classes are assigned by separating them with a space so in this case it will be class item and class left -->
+            <li class="item right"> <a href="Login.html">Login</a> </li>
+            <li class="item right"> <a href="Register.html">Register</a> </li>
+        </ul>
+    </navigation>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Featured Games Section -->
+        <section id="featuredGames" class="vollkorn-font">
+            <h2>Featured Games</h2>
+            <div id="gameCards">
+                <section role ="region" aria-labelledby="Snake_Game" aria-describedby="Snake Apple Eater" id="snake_section">
+                    <header>
+                        <h3 id="Snake_Game">Snake Game</h3>
+                    </header>
+                    <img src="../images/covers/Snake.png" alt="Snake eating an apple image.">
+                    <p id="game1-description">In this classic Snake game, you control a snake that navigates around the screen, eating apples to grow longer. The objective is to consume as many apples as possible without colliding with the walls or running into your own tail. With each apple eaten, the snake grows longer and the game becomes more challenging. Use the arrow keys to guide the snake and see how long you can survive!</p>
+                    <footer>
+                        <a href="../games/Snake.html">Play</a>
+                    </footer>
+                </section>
+            </div>
+        </section>
+
+        <!-- News and Updates Section -->
+        <article class="vollkorn-font">
+            <h2>News and Updates</h2>
+                <h3>Exciting News Title</h3>
+                <p>Details about the exciting news or update. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+    </main>
+</body>
+</html>
+
+
+
+<!--
+    Notes:
+        Dot (.): Selects elements by class. ul.navigationBarList targets <ul> elements with the class navigationBarList.
+        Comma (,): Applies the same styles to multiple selectors. ul, .navigationBarList targets all <ul> elements and any element with the class navigationBarList.
+        Space ( ): Selects descendant elements. ul .navigationBarList targets elements with the class navigationBarList that are inside <ul> elements.
+
+        
+    Google Fonts:
+            Vollkorn, Click "get font", "get embeded code"
+                .vollkorn-<uniquifier> {
+                    font-family: "Vollkorn", serif;
+                    font-optical-sizing: auto;
+                    font-weight: <weight>;
+                    font-style: normal;
+                }
+
+-->

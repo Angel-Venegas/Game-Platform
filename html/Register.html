@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/Style_Pages/GeneralStyle.css">
+    <link rel="stylesheet" href="../css/Style_Pages/LoginRegister.css">
+    <!-- Link to Font Awesome CSS for including icons. Version 6.5.2 from CDN with integrity check and no-referrer policy -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <!-- This Contains Content About The Navigation Bar -->
+    <navigation>
+        <!-- Homepage's Navigation Bar's List Of Items -->
+        <ul class="navigationBarList">
+            <li class="item left"> <a href="Games.html">Games</a> </li> <!-- Multiple classes are assigned by separating them with a space so in this case it will be class item and class left -->
+            <li class="item right"> <a href="Login.html">Login</a> </li>
+            <li class="item right"> <a href="Register.html">Register</a> </li>
+        </ul>
+    </navigation>
+
+    <main>
+        <video autoplay muted loop playsinline preload id="video-background" style="object-fit: cover; opacity: 0.7;">
+            <source src="../videos/Red Ball Loop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div id="container">
+            <form action="signup.php" method="POST">
+                <h1>Sign Up</h1><br>
+                
+                <!-- Div tag containing the first name input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-pencil" aria-label="Pencil Icon"></span>
+                    <input type="text" id="first_name_field" name="first_name" placeholder="First Name" required><br><br>
+                </div>
+                <!-- Div tag containing the last name input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-pencil" aria-label="Pencil Icon"></span>
+                    <input type="text" id="last_name_field" name="last_name" placeholder="Last Name" required><br><br>
+                </div>
+                <!-- Div tag containing the email input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-envelope" aria-label="Envelope Icon"></span>
+                    <input type="email" id="email_field" name="email" placeholder="Email" required><br><br>
+                </div>
+                <!-- Div tag containing the username input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-user" aria-label="User Icon"></span>
+                    <input type="text" id="username_field" name="username" placeholder="Username" pattern="[^ \n!?]{5,20}"
+                    title="Username must be between 5 and 20 characters and cannot contain spaces, newlines, exclamation marks (!), or question marks (?)."><br><br>
+                </div>
+                <!-- Div tag containing the password input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-lock" aria-label="Lock Icon"></span>
+                    <input type="password" id="password_field" name="password" placeholder="Password"
+                            required pattern="^.*(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+                            title="Password must be at least 8 characters long and include 1 lowercase letter,
+                            1 uppercase letter, and 1 number."><br><br>
+                </div>
+                <!-- Div tag containing the confirmation password input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-circle-check" aria-label="Circle Check Icon"></span>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password"
+                            oninput="this.setCustomValidity('')" required><br><br>
+                </div>
+                <!-- Register input that acts as a button to register the user-->
+                <!-- We'll use this to link our registration info to our Database -->
+                <input id="button" type="submit" value="Register">
+                <!-- P tag that contains link to login page if user already has accounts -->
+                <p>Already have an account? Login <a href="Login.html">here</a></p>
+                <p id="signup_message">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+<!--
+    Fontawesome:
+        Fontawesome cdnjs:
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        Fontawesome icons:   
+            Icons: Find the icon, click on it, and just copy the link of the icon you want
+                https://fontawesome.com/icons
+
+    
+    Pixabay:
+        For video loops
+-->

@@ -1,0 +1,71 @@
+h1 {
+    text-align: center; /* Aligns the text inside the <h1> element to the center */
+}
+
+form {
+    display: flex; /* Ensures the form uses flexbox layout */
+    flex-direction: column; /* Stacks the form elements vertically */
+    align-items: center; /* Aligns items horizontally at the center */
+    margin: 220px 700px 100px 700px; /* This will add margin outside of the form   or  margin: 100px 700px; (top-bottom, right-left) */
+    padding: 20px 0px; /* This will add padding inside of the form instead of the outside */
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* lightblue with 50% opacity */ 
+}
+
+.input_container {
+    padding: 20px 200px 10px 200px; /* Padding order: top right bottom left */
+    scale: 150%;
+}
+
+input {
+    width: 300px;
+}
+
+#button {
+    background: linear-gradient(135deg, #d6be21, #ffd755); /* Gradient background */
+    height: 60px;
+    width: 250px;
+    color: rgb(0, 0, 0); /* Button Letter Color */
+    border: none;
+    border-radius: 30px; /* Smoother border radius */
+    font-size: 18px; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    position: relative;
+    overflow: hidden; /* Hide overflow for pseudo-element animation */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add initial shadow */
+}
+
+#button::before {
+    content: ''; /* Add a pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2); /* White semi-transparent background */
+    border-radius: 50%; /* Circle */
+    transition: all 0.3s ease; /* Smooth transition */
+    transform: translate(-50%, -50%) scale(0); /* Initial scale down */
+}
+
+#button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+}
+
+#button:hover {
+    transform: translateY(-5px); /* Move button up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+#rbutton:active::before {
+    transform: translate(-50%, -50%) scale(0); /* Scale down on click */
+}
+
+#button:active {
+    transform: translateY(0); /* Reset button position on click */
+}
+
+

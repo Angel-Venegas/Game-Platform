@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/Style_Pages/GeneralStyle.css">
+    <link rel="stylesheet" href="../css/Style_Pages/LoginRegister.css">
+    <!-- Link to Font Awesome CSS for including icons. Version 6.5.2 from CDN with integrity check and no-referrer policy -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <!-- This Contains Content About The Navigation Bar -->
+    <navigation>
+        <!-- Homepage's Navigation Bar's List Of Items -->
+        <ul class="navigationBarList">
+            <li class="item left"> <a href="Games.html">Games</a> </li> <!-- Multiple classes are assigned by separating them with a space so in this case it will be class item and class left -->
+            <li class="item right"> <a href="Login.html">Login</a> </li>
+            <li class="item right"> <a href="Register.html">Register</a> </li>
+        </ul>
+    </navigation>
+
+    <main>
+        <video autoplay muted loop playsinline preload id="video-background" style="object-fit: cover; opacity: 0.7;">
+            <source src="../videos/Red Ball Loop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div id="container">
+            <form action="login.php" method="POST">
+                <h1>Login</h1><br>
+
+                <!-- Div tag containing the username input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-user" aria-label="User Icon"></span>
+                    <input type="text" id="username_field" name="username" placeholder="Username" pattern="[^ \n!?]{5,20}"
+                    title="Username must be between 5 and 20 characters and cannot contain spaces, newlines, exclamation marks (!), or question marks (?)."><br><br>
+                </div>
+                <!-- Div tag containing the password input of the form -->
+                <div class="input_container">
+                    <span class="fa-solid fa-lock" aria-label="Lock Icon"></span>
+                    <input type="password" id="password_field" name="password" placeholder="Password"><br><br>
+                </div>
+
+                <input id="button" type="submit" value="Login">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

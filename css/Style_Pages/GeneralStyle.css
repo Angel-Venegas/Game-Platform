@@ -1,0 +1,140 @@
+/* Styles for the body of the webpage */
+body {
+    /* background: url('../videos/Galaxy Stars Loop.mp4'); Does not work this way */
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #000000; /* Light gray background */
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Setting z-index: -1; means that the element will be positioned behind the default stacking order of elements with a z-index value of 0 or higher. */
+}
+
+
+
+
+/* Styles for fonts */
+.vollkorn-font {
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+/* Apply a background color and style to the header */
+header {
+    background-color: rgba(30, 0, 0, 0.9); /* Dark red with transparency */
+    padding: 0px 30px;
+    color: #ffffff; /* White text color */
+    font-size: 0px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgb(0, 0, 0); /* Subtle shadow effect */
+    max-width: 1800px; /* Optional: Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the header horizontally */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+
+
+/* Styles for navigation bar items with a hover effect and movement of class="item" */
+.item {
+    padding: 23px;
+    color: black;
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+
+/* Styles unordered lists with class navigationBarList */
+ul.navigationBarList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.699);
+    overflow: hidden;
+    height: 80px;
+    position: fixed; /* Fix the navigation bar to the top of the page */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Make it span the full width of the page */
+    z-index: 1000; /* Ensure it appears above other content */
+    border-bottom: 3px solid #280000; /* Add a bottom border for depth */
+}
+
+
+/* Styles the links (anchors) within unordered lists with the specified class */
+ul.navigationBarList a {
+    color: orange;
+    text-decoration-line: none;
+    font-weight: normal;
+}
+
+
+/* Styles all of the list items inside of ul.navigationBar */
+ul.navigationBarList li {
+    margin: 0 20px; 
+}
+
+
+/* Games Item, styles the item containing both classes item and left that is within an unordered list with the class name navigationBarList */
+ul.navigationBarList .item.left {
+    float: left;
+}
+
+/* Login Item */
+ul.navigationBarList .item.right:nth-child(2) {
+    float: right;
+}
+
+/* Register Item */
+ul.navigationBarList .item.right:nth-child(3) {
+    float: right;
+}
+
+ul.navigationBarList .item:hover {
+    transform: translateY(-5px);
+}
+
+ul.navigationBarList .item:hover a {
+    color: rgb(255, 255, 255); /* Change the color to your desired hover color */
+}
+
+
+
+
+/* Main Content Section */
+main {
+    padding: 20px;
+}
+
+
+
+
+/* News Section Styles */
+article {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 0px 40px 30px; /* Padding order: top right bottom left */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+    border-radius: 8px;
+    color: rgb(255, 221, 108);
+}
+
+article h3 {
+    color: #ffffff;
+}
+
+article p {
+    color: #ffffff;
+}

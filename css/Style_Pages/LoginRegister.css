@@ -6,10 +6,11 @@ form {
     display: flex; /* Ensures the form uses flexbox layout */
     flex-direction: column; /* Stacks the form elements vertically */
     align-items: center; /* Aligns items horizontally at the center */
-    margin: 220px 700px 100px 700px; /* This will add margin outside of the form   or  margin: 100px 700px; (top-bottom, right-left) */
+    margin: 220px auto 100px auto; /* This will add margin outside of the form   or  margin: 100px 700px; (top-bottom, right-left) */
     padding: 20px 0px; /* This will add padding inside of the form instead of the outside */
     border-radius: 40px;
     background-color: rgba(255, 255, 255, 0.9); /* lightblue with 50% opacity */ 
+    width: 800px; /* Set a fixed width */
 }
 
 .input_container {

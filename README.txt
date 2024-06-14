@@ -2,3 +2,5 @@
 
 The working website can be found by visiting http://thegameplatform.com/
 The website uses, HTML, JavaScript, CSS, and PHP.
+
+It uses some of Amazon AWS services such as

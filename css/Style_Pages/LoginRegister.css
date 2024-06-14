@@ -1,5 +1,6 @@
 h1 {
     text-align: center; /* Aligns the text inside the <h1> element to the center */
+    font-size: 50px;
 }
 
 form {
@@ -14,13 +15,29 @@ form {
 }
 
 .input_container {
-    padding: 20px 200px 10px 200px; /* Padding order: top right bottom left */
+    position: relative; /* Allow absolute positioning of child elements */
+    padding: 10px 40px 20px 40px; /* Padding order: top right bottom left */
     scale: 150%;
+    width: 300px; /* Ensure the container has the same width as the input */
+    display: flex;
+    align-items: center; /* Vertically align items */
 }
 
 input {
     width: 300px;
+    margin-left: 10px; /* To push the left icons further to the left */
 }
+
+.input_container img {
+    position: absolute;
+    right: 15px; /* Position 10px from the right edge, meaning the eye icon will be pushed closer to the left */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    width: 20px; /* Adjust the size of the icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
 
 #button {
     background: linear-gradient(135deg, #d6be21, #ffd755); /* Gradient background */

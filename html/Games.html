@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Platform</title>
+    <link rel="stylesheet" href="../css/Style_Pages/GeneralStyle.css">
+    <link rel="stylesheet" href="../css/Style_Pages/Games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop playsinline preload id="video-background" style="object-fit: cover; opacity: 0.7;">
+        <source src="../videos/Galaxy Stars Non-Loop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <navigation>
+        <ul class="navigationBarList vollkorn-font">
+            <li class="item left"> <a href="../index.html">Homepage</a> </li>
+            <li class="item right"> <a href="../php/logout.php">Logout</a> </li>
+        </ul>
+    </navigation>
+
+    <br><br><br><br><br>
+    <main>
+        <section id="game-container" class="vollkorn-font">
+            <h1>Games</h1>
+            <div class="game-box-column-container">
+                <div class="game-box-column">
+                    <div class="game-box">
+                        <section role="region" aria-labelledby="Snake_Game" aria-describedby="Snake_Apple_Eater" id="snake_section">
+                            <header>
+                                <h2>Snake Game</h2>
+                            </header>
+                            <img src="../images/covers/Snake.png" alt="Snake eating an apple image.">
+                            <footer>
+                                <a href="../games/Snake.html">Play</a>
+                            </footer>
+                        </section>
+                    </div>
+                    <div class="game-box">
+                        <section role="region" aria-labelledby="Another_Game_1" aria-describedby="Another_Game_Description_1" id="another_section">
+                            <header>
+                                <h2>Another Game 3</h2>
+                            </header>
+                            <img src="../images/covers/AnotherGame.png" alt="Another game image.">
+                            <footer>
+                                <a href="">Play</a>
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+                <div class="game-box-column">
+                    <div class="game-box">
+                        <section role="region" aria-labelledby="Tic-Tac-Toe" aria-describedby="Tic-Tac-Toe" id="tic-tac-toe_section">
+                            <header>
+                                <h2>Tic Tac Toe</h2>
+                            </header>
+                            <img src="../images/covers/tic-tac-toe.png" alt="Tic Tac Toe board image">
+                            <footer>
+                                <a href="">Play</a>
+                            </footer>
+                        </section>
+                    </div>
+                    <div class="game-box">
+                        <section role="region" aria-labelledby="Another_Game_2" aria-describedby="Another_Game_Description_2" id="another_section">
+                            <header>
+                                <h2>Another Game 4</h2>
+                            </header>
+                            <img src="../images/covers/AnotherGame.png" alt="Another game image.">
+                            <footer>
+                                <a href="">Play</a>
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/Style_Pages/GeneralStyle.css">
     <link rel="stylesheet" href="../css/Style_Pages/LoginRegister.css">
-    <!-- Link to Font Awesome CSS for including icons. Version 6.5.2 from CDN with integrity check and no-referrer policy -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let password = document.getElementById("password_field");
+            let show_image = document.getElementById("password_show");
+            let hide_image = document.getElementById("password_hide");
+            
+            const form = document.querySelector("form");
+
+            function togglePass() {
+                if (password.type === "password") {
+                    password.type = "text";
+                    show_image.style.display = "none";
+                    hide_image.style.display = "inline";
+                } else {
+                    password.type = "password";
+                    show_image.style.display = "inline";
+                    hide_image.style.display = "none";
+                }
+            }
+
+            show_image.addEventListener("click", togglePass);
+            hide_image.addEventListener("click", togglePass);
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                formData.append('action', 'login');
+
+                fetch('../php/login.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        const loginMessage = document.getElementById('login_message');
+                        if (data.status === 'success') {
+                            loginMessage.innerText = data.message;
+                            loginMessage.style.color = 'green';
+                            window.location.href = '../index.html'; // Redirect to index.php
+                        } else if (data.status === 'error') {
+                            loginMessage.innerText = data.message;
+                            loginMessage.style.color = 'red';
+                            this.reset();
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
-    <!-- This Contains Content About The Navigation Bar -->
     <navigation>
-        <!-- Homepage's Navigation Bar's List Of Items -->
         <ul class="navigationBarList">
-            <li class="item left"> <a href="Games.html">Games</a> </li> <!-- Multiple classes are assigned by separating them with a space so in this case it will be class item and class left -->
-            <li class="item right"> <a href="Login.html">Login</a> </li>
+            <li class="item left"> <a href="../index.html">Homepage</a> </li>
             <li class="item right"> <a href="Register.html">Register</a> </li>
         </ul>
     </navigation>
@@ -28,22 +74,22 @@
         </video>
         
         <div id="container">
-            <form action="login.php" method="POST">
-                <h1>Login</h1><br>
-
-                <!-- Div tag containing the username input of the form -->
+            <form>
+                <h1>Login</h1>
                 <div class="input_container">
                     <span class="fa-solid fa-user" aria-label="User Icon"></span>
                     <input type="text" id="username_field" name="username" placeholder="Username" pattern="[^ \n!?]{5,20}"
                     title="Username must be between 5 and 20 characters and cannot contain spaces, newlines, exclamation marks (!), or question marks (?)."><br><br>
                 </div>
-                <!-- Div tag containing the password input of the form -->
                 <div class="input_container">
                     <span class="fa-solid fa-lock" aria-label="Lock Icon"></span>
-                    <input type="password" id="password_field" name="password" placeholder="Password"><br><br>
+                    <input type="password" id="password_field" name="password" placeholder="Password">
+                    <img id="password_show" src="../images/icons/eye.png" alt="Show Password" style="cursor: pointer;">
+                    <img id="password_hide" src="../images/icons/eye-off.png" alt="Hide Password" style="display: none; cursor: pointer;"><br><br>
                 </div>
-
                 <input id="button" type="submit" value="Login">
+                <p>Don't have an account? Register <a href="Register.html">here</a></p>
+                <p id="login_message"></p>
             </form>
         </div>
     </main>

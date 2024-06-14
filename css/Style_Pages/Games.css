@@ -1,0 +1,93 @@
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 70px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+#game-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 30px 40px 30px; /* Padding order: top right bottom left */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+    border-radius: 8px;
+    color: rgb(255, 221, 108);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-box-column-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the left and right columns */
+    width: 100%;
+    gap: 20px; /* Add space between columns */
+}
+
+.game-box-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 30px; /* Space between boxes */
+}
+
+.game-box {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.game-box header {
+    background-color: rgba(195, 0, 0, 0.9); /* Dark red with transparency */
+    padding: 0px 30px;
+    color: #ffffff; /* White text color */
+    font-size: 0px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgb(0, 0, 0); /* Subtle shadow effect */
+    max-width: 1800px; /* Optional: Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the header horizontally */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.game-box a {
+    display: inline-block;
+    padding: 8px 16px; /* 8px top and bottom, 16px left and right */
+    background-color: rgb(0, 177, 183); /* This as well as more stuff to make it look more like a button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.game-box a:hover {
+    background-color: rgb(0, 229, 255); /* Lighter blue on button hover */
+}
+
+
+img {
+    max-width: 200px; /* Set a specific maximum width for all images */
+    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
+    border-radius: 40px; /* Makes the edges of the border rounder */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 10px; /* Adjust the bottom margin as needed */
+}
+
+article h3 {
+    padding-left: 10px;
+    color: rgb(191, 191, 191);
+}
+
+article p {
+    padding-left: 20px;
+}

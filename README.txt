@@ -4,3 +4,8 @@ The working website can be found by visiting http://thegameplatform.com/
 The website uses, HTML, JavaScript, CSS, and PHP.
 
 It uses some of Amazon AWS services such as an EC2 instance, Route 53, RDS, and AWS Certificate Manager (SSL).
+
+
+The website's homepage shows featured games, news, and updates about the website. In order to play a game a user must register an account with an email address and a unique username. After that, they may log in and start playing some games.
+
+It uses Let's Encrypt to obtain a free SSL certificate for the website. This is set up through the EC2 Linux terminal.

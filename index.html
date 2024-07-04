@@ -15,7 +15,7 @@
             const playButton = document.getElementById("playButton");
             const loginButton = document.getElementById("loginButton");
 
-            // Initially hide the Play button
+            // Initially hides the Play button
             if (playButton) {
                 playButton.style.display = 'none';
             }
@@ -23,12 +23,12 @@
             fetch('php/check_session.php')
                 .then(response => response.json())
                 .then(data => {
-                    if (data.isLoggedIn) {
-                        // Show the Play button if the user is logged in
+                    if (data.isLoggedIn) { // If logged in
+                        // Shows the Play button if the user is logged in
                         if (playButton) {
                             playButton.style.display = 'block';
                         }
-                        // Replace the login button with the username
+                        // Replaces the login button with the username if the user successfully logged in
                         if (loginButton) {
                             loginButton.innerHTML = `Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.username}`;
                             loginButton.href = 'javascript:void(0);';
@@ -36,8 +36,8 @@
                                 event.preventDefault();
                             });
                         }
-                    } else {
-                        // Add event listener to redirect to login page when clicking Games link if not logged in
+                    } else { // If not logged in
+                        // An event listener to redirect to the login page when clicking Games if not logged in
                         if (gamesLink) {
                             gamesLink.addEventListener("click", function(event) {
                                 event.preventDefault();
@@ -61,7 +61,6 @@
     
     <!-- This Contains Content About The Navigation Bar -->
     <navigation>
-        <!-- Homepage's Navigation Bar's List Of Items -->
         <ul class="navigationBarList vollkorn-font">
             <li class="item left"> <a href="html/Games.html" id="gamesLink">Games</a> </li> <!-- Multiple classes are assigned by separating them with a space so in this case it will be class item and class left -->
             <li class="item right"> <a href="html/Login.html" id="loginButton"><span id="usernameText">Login</span></a> </li>
@@ -69,8 +68,8 @@
         </ul>
     </navigation>
 
-    <!-- Main Content Section -->
     <br><br><br><br><br>
+    <!-- Main Content Section -->
     <main>
         <!-- Featured Games Section -->
         <section id="featuredGames" class="vollkorn-font">
